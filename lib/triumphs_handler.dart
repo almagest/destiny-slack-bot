@@ -13,7 +13,7 @@ import 'utils/players.dart' as players;
 
 const _OPTION_HELP = 'help';
 
-/// Displays Moments of Triumph completion.
+/// Displays Age of Triumph completion.
 class TriumphsHandler extends SlackCommandHandler {
   final _log = new Logger('TriumphsHandler');
 
@@ -26,7 +26,7 @@ class TriumphsHandler extends SlackCommandHandler {
     if (text == _OPTION_HELP) {
       _log.info('@$userName needs help');
       return createTextResponse(
-          'Looks up a given player\'s completion on Moments of Triumph',
+          'Looks up a given player\'s completion on Age of Triumph',
           private: true);
     }
 
@@ -46,7 +46,7 @@ class TriumphsHandler extends SlackCommandHandler {
       _log.info('Progress is $progress%');
       final url = client.getPlayerTriumphsUrl(id);
       return createTextResponse(
-          '$gamertag has completed *$progress%* of <$url|Moments of Triumph>',
+          '$gamertag has completed *$progress%* of <$url|Age of Triumph>',
           expandLinks: false);
     } else {
       _log.warning('Could not find progress...');
