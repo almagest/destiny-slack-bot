@@ -6,7 +6,7 @@ dependencies:
   bungie_client:
     git:
       url: https://github.com/almagest/dart-bungie-client.git
-      ref: 05f1253f194c15d1c4b0356263dc4bbc22d0b23f
+      ref: 4ed49ff0ff951469c43eb670714d701fb71e8072
   http: ^0.11.3+3
   logging: ^0.11.2
   postgresql: ^0.3.3
